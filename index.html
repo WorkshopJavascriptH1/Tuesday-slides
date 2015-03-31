@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Mardi – AJAX</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Romain Quilliot, Arnaud Villani">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<!-- ACCUEIL -->
+				<section>
+					<h1>MARDI</h1>
+					<h4 style="color: rgba(0, 0, 0, 0.4)">A la découverte de AJAX</h4>
+				</section>
+				
+
+
+				<!-- KESAKO -->
+				<section>
+					<section>
+						<h4>Ce que l'on pourrait</h4>
+						<h1>croire</h1>
+					</section>
+
+					<section>
+						<h3>Une lessive</h3>
+						<p>
+							<img src="images/lessive.jpg" style="width: 50vh">
+						</p>
+					</section>
+
+					<section>
+						<h3>Un héros grecque</h3>
+						<p>
+							<img src="images/heros.jpg" style="width: 50vh">
+						</p>
+					</section>
+				</section>
+
+
+				<!-- KESAKO -->
+				<section>
+					<section>
+						<h4>Ce que c'est</h4>
+						<h1>réellement</h1>
+					</section>
+
+					<section>
+						<h3>Un système de requête asynchrones</h3>
+						<p>
+							<img src="images/ajax.png" style="width: 50vh">
+						</p>
+					</section>
+				</section>
+
+
+				<!-- COMMENT CA MARCHE -->
+				<section>
+					<section>
+						<h2>Comment ca marche ?</h2>
+					</section>
+
+					<section>
+						<p>
+							<img src="images/working.png" style="height: 100vh">
+						</p>
+					</section>
+				</section>
+
+
+				<!-- HTTP -->
+				<section>
+					<section>
+						<h2>HTTP, parlons en</h2>
+					</section>
+
+					<section>
+						<h3>Les headers</h3>
+						<p>
+							<ul>
+								<li>Status</li>
+								<li>Datas</li>
+								<li>Content-type</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3>Les méthodes</h3>
+						<p>
+							<ul>
+								<li>GET</li>
+								<li>POST</li>
+								<li>PUT</li>
+								<li>DELETE</li>
+							</ul>
+						</p>
+					</section>
+
+					<section>
+						<h3>API REST</h3>
+						<p>
+							Structure d'API
+						</p>
+						<p>
+							<a href="https://www.youtube.com/watch?v=TjCGV7IiVSg">Conférence PHPTour 2012</a>
+						</p>
+					</section>
+
+					<section>
+						<h3>JSON</h3>
+						<p>
+							Format de données<br>
+							<b style="font-size: 25px; font-weight: normal; color: #c3c3c3">(souvent utilisé pour retourner des valeurs avec REST)</b>
+						</p>
+					</section>
+				</section>
+
+
+				<!-- XMLHttpRequest -->
+				<section>
+					<section>
+						<h2>XMLHttpRequest</h2>
+					</section>
+
+					<section>
+						<p>
+							Système de requête AJAX de javascript.
+						</p>
+					</section>
+
+					<section>
+						<p>
+							<pre><code class="javascript">var req = new XMLHttpRequest();
+req.open('GET', 'URL', false);
+req.send(null);
+</code></pre>
+						</p>
+					</section>
+
+					<section>
+						<p>
+							<pre><code class="javascript">if (req.status){
+   alert('OK');
+} else {
+   alert(req.responseText);
+}
+</code></pre>
+						</p>
+					</section>
+				</section>
+
+
+				<!-- FETCH -->
+				<section>
+					<section>
+						<h2>fetch()</h2>
+					</section>
+
+					<section>
+						<p>
+							Nouvelle manière de fetcher des ressources sur le réseau.
+						</p>
+					</section>
+
+					<section>
+						<p>
+							<pre><code class="javascript">fetch(input, init)
+   .then(function(response) {
+      //code
+   };
+</code></pre>
+						</p>
+					</section>
+				</section>
+
+
+				<!-- jQUERY -->
+				<section>
+					<section>
+						<h2>jQuery</h2>
+					</section>
+
+					<section>
+						<p>
+							$.GET();
+						</p>
+					</section>
+
+					<section>
+						<p>
+							$.AJAX();
+						</p>
+					</section>
+
+					<section>
+						<p>
+							<pre><code class="javascript">$.ajax({
+   url: "URL",
+   method: "METHOD",
+   data: {}
+}).success(function (response) {
+   //code en cas de succes
+}).error(function () {
+	//code en cas d'erreur
+});
+</code></pre>
+						</p>
+					</section>
+
+					<section>
+						<p>
+							$.GET();
+						</p>
+					</section>
+
+					<section>
+						<p>
+							<pre><code class="javascript">$.get("URL", function (response) {
+   //code en cas de succes
+});
+</code></pre>
+						</p>
+					</section>
+				</section>
+
+
+				<!-- jQUERY -->
+				<section>
+					<section>
+						<h2>Allez plus loin</h2>
+					</section>
+
+					<section>
+						<p>
+							<ul>
+								<li><a href="http://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Infos sur HTTP</a></li>
+								<li><a href="http://fr.wikipedia.org/wiki/Representational_State_Transfer">Infos sur REST</a></li>
+								<li><a href="https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest">Doc XMLHttpRequest</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch">Doc Fetch()</a></li>
+							</ul>
+						</p>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
